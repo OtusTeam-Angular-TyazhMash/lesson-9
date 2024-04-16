@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid__cell {
+  width: 64px;
+  height: 64px;
+  border: 1px solid grey;
+}
+
+.grid__cell--black {
+  background-color: black;
+}

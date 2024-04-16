@@ -1,0 +1,13 @@
+.active {
+  color: red;
+}
+
+.touched {
+  font-weight: bold;
+}
+
+.some-string {
+  background-color: rgb(224, 224, 241);
+  border-radius: 4px;
+  padding-left: 8px;
+}

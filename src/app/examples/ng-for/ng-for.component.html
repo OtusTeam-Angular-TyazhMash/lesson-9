@@ -1,0 +1,8 @@
+<h2>ngFor</h2>
+<div *ngFor="let _ of gridSize; index as i" class="row">
+  <div
+    class="grid__cell"
+    *ngFor="let __ of gridSize; index as j; odd as odd; even as even"
+    [class.grid__cell--black]="(i + j) % 2 === 0"
+  ></div>
+</div>

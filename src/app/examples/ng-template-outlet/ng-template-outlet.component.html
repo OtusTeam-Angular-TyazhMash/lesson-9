@@ -1,0 +1,24 @@
+<h2>ngTemplateOutlet</h2>
+
+<select
+  *ngIf="items.length; else emptyRef"
+  name="select"
+  id="select"
+  class="select"
+>
+  <option *ngFor="let item of items" [value]="item">{{ item }}</option>
+</select>
+
+<ng-template #emptyRef> no items for select </ng-template>
+
+<!-- <ng-container
+    *ngFor="let item of items"
+    [ngTemplateOutlet]="template || optionDefaultRef"
+    [ngTemplateOutletContext]="{ $implicit: item }"
+  ></ng-container> -->
+
+<!-- <ng-template #optionDefaultRef let-item>
+  <option>
+    {{ item }}
+  </option>
+</ng-template> -->
