@@ -16,7 +16,8 @@ export class NgClassComponent implements OnInit {
 
   ngOnInit(): void {
     this.interval$.subscribe((r) => {
-      this.mutateClasses(r);
+      //this.mutateClasses(r);
+      this.createNewClasses(r)
     });
   }
 

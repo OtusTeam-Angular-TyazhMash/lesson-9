@@ -6,10 +6,26 @@
   id="select"
   class="select"
 >
-  <option *ngFor="let item of items" [value]="item">{{ item }}</option>
+  <ng-container
+    *ngFor="let item of items"
+    [ngTemplateOutlet]="templateRef || templateOptionsRef"
+    [ngTemplateOutletContext]="{$implicit: item, someKey: 'someValue'}"
+  ></ng-container>
+
 </select>
 
 <ng-template #emptyRef> no items for select </ng-template>
+
+<ng-template #templateOptionsRef
+             let-someItem
+             let-someKey="someKey"
+>
+  <option>{{ someItem }} {{someKey}}</option>
+</ng-template>
+
+
+
+
 
 <!-- <ng-container
     *ngFor="let item of items"

@@ -10,7 +10,7 @@ export class NgTemplateOutletComponent<T> implements OnInit {
   public items: T[] = [];
 
   @Input()
-  public template: TemplateRef<{ firstName: string }> | null = null;
+  public templateRef: TemplateRef<any> | null = null;
 
   constructor() {}
 

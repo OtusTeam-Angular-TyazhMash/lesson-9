@@ -1,11 +1,4 @@
-import {
-  Component,
-  Inject,
-  Injector,
-  Input,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import {Component, Inject, Injector, Input} from '@angular/core';
 
 @Component({
   selector: 'my-ng-component-outlet',
@@ -14,7 +7,18 @@ import {
 })
 export class NgComponentOutletComponent {
   public component = DynamicComponent;
-  constructor() {}
+  private userName = 'From Parent User Name';
+  constructor(private injector: Injector) {}
+
+  public myInject = Injector.create({
+    parent: this.injector,
+    providers: [
+      {
+        provide: 'userName',
+        useValue: this.userName,
+      }
+    ]
+  })
 }
 
 @Component({
@@ -22,6 +26,6 @@ export class NgComponentOutletComponent {
   template: 'hello user: <strong>{{userName}}</strong>',
 })
 export class DynamicComponent {
-  @Input()
-  public readonly userName: string = 'Dynamic User Name';
+
+  constructor(@Inject('userName') public userName: string) {}
 }

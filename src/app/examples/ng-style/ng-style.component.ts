@@ -17,7 +17,8 @@ export class NgStyleComponent implements OnInit {
 
   ngOnInit(): void {
     this.interval$.subscribe((count) => {
-      this.mutateStyles(count);
+      //this.mutateStyles(count);
+      this.createNewStyles(count);
     });
   }
 

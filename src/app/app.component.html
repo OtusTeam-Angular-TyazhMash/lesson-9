@@ -1,8 +1,13 @@
 <h1>Встроенные директивы</h1>
-<!-- <my-ng-style></my-ng-style> -->
-<!-- <my-ng-class></my-ng-class> -->
-<!-- <my-ng-if></my-ng-if> -->
-<!-- <my-ng-switch></my-ng-switch> -->
-<!-- <my-ng-template-outlet></my-ng-template-outlet> -->
-<!-- <my-ng-for></my-ng-for> -->
-<!-- <my-ng-component-outlet></my-ng-component-outlet> -->
+<!-- <my-ng-style></my-ng-style>-->
+<!-- <my-ng-class></my-ng-class>-->
+<!-- <my-ng-if></my-ng-if>-->
+<!-- <my-ng-switch></my-ng-switch>-->
+<!-- <my-ng-template-outlet [items]="items"-->
+<!-- ></my-ng-template-outlet>-->
+<!-- <my-ng-for></my-ng-for>-->
+ <my-ng-component-outlet></my-ng-component-outlet>
+
+<ng-template #optionsRef let-item>
+  <option [value]="item.firstName">{{item.firstName}} | {{item.lastName}}</option>
+</ng-template>

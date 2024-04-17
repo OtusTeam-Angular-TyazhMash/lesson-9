@@ -22,6 +22,8 @@ export class NgIfComponent implements OnInit {
   );
 
   public getSomeValue(): string | number | object {
-    return 'some value';
+    return {
+      name: 'Bob'
+    }
   }
 }

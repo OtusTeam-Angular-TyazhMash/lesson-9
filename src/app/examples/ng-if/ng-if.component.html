@@ -1,12 +1,15 @@
 <h2>ngIf</h2>
 
-<!-- <div *ngIf="someArray.length">not empty array</div> -->
+<!-- <div *ngIf="someArray.length">not empty array</div>-->
 
-<!-- <div *ngIf="!someArray.length">empty array</div> -->
+<!-- <div *ngIf="!someArray.length">empty array</div>-->
 
-<!-- <div *ngIf="getSomeValue() as value">{{ value }}</div> -->
+<!-- <div *ngIf="getSomeValue() as value">-->
+<!--   {{ value | json }}-->
+<!-- </div>-->
 
-<!-- <div *ngIf="loadingState$ | async as value; else loadingRef">
+
+<div *ngIf="loadingState$ | async as value; else loadingRef">
   {{ value }}
 </div>
-<ng-template #loadingRef> ....loading... </ng-template> -->
+<ng-template #loadingRef> ....loading... </ng-template>

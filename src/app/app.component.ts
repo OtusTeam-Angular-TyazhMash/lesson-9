@@ -14,6 +14,7 @@ export class AppComponent {
   ];
 
   public readonly items = this.stringArray;
+  public readonly itemsObject = this.objectArray;
 
   public readonly gridArray = this.createArray(8);
 

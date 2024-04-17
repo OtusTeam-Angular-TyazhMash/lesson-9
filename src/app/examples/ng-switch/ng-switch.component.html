@@ -1,13 +1,13 @@
 <h2>ngSwitch</h2>
 
 <p [ngSwitch]="userRole">
-  <span *ngSwitchCase="'admin'">text for only admin roles</span>
-  <span *ngSwitchCase="'support'">text for only support roles</span>
-  <span *ngSwitchCase="'user'">text for only user roles</span>
-  <!-- <span *ngSwitchDefault> the role is not defined </span> -->
+  <span *ngSwitchCase="userRoleEnum.ADMIN">text for only admin roles</span>
+  <span *ngSwitchCase="userRoleEnum.SUPPORT">text for only support roles</span>
+  <span *ngSwitchCase="userRoleEnum.USER">text for only user roles</span>
+  <span *ngSwitchDefault> the role is not defined </span>
 </p>
 
-<button (click)="userRole = 'admin'">Set Admin</button>
-<button (click)="userRole = 'support'">Set Support</button>
-<button (click)="userRole = 'user'">Set User</button>
+<button (click)="userRole = userRoleEnum.ADMIN">Set Admin</button>
+<button (click)="userRole = userRoleEnum.SUPPORT">Set Support</button>
+<button (click)="userRole = userRoleEnum.USER">Set User</button>
 <button (click)="userRole = undefined">Set Unknown</button>
